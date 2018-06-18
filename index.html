@@ -1,3 +1,356 @@
+<!doctype html>
 <html>
-    <body>JHipster Conf</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>JHipster Conf</title>
+    <meta name="description" content="JHipster Conf">
+    <meta name="author" content="Pascal Grimaud">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <p>
+                    <img height="144px" data-src="./images/banner.png" alt="">
+                </p>
+                <h1>DevOps with JHipster</h1>
+                <h3>Continuous Integration and Delivery</h3>
+            </section>
+            <section>
+                <h2>Pascal GRIMAUD</h2>
+                <p>Java Consultant</p>
+                <p>
+                    <a href="https://www.ippon.fr" target "_blank" title="ippon">
+                        <img height="144px" data-src="./images/logo_HD_300dpi_black-2141.png" alt="">
+                    </a>
+                </p>
+                <p>Open Source Developer</p>
+                <p>
+                    <a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
+                        <img height="48px" data-src="./images/twitter.jpg" alt=""> @pascalgrimaud
+                    </a>
+                    <br/>
+                    <a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
+                        <img height="48px" data-src="./images/github.png" alt=""> github.com/pascalgrimaud
+                    </a>
+                </p>
+            </section>
+            <section>
+                <h1><i class="fas fa-clipboard-list"></i> Summary</h1>
+                <img data-src="./images/devops.png" alt="">
+                <h3>
+                    <ul style="line-height:2.0;">
+                        <li class="fragment">JHipster Continuous Integration</li>
+                        <li class="fragment">How JHipster can help DevOps teams</li>
+                    </ul>
+                </h3>
+            </section>
+            <section>
+                <h1>Part 1</h1>
+                <h2>JHipster Continuous Integration</h2>
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                        <br/>on
+                        <img height="70px" data-src="./images/github-logo.png" alt="">
+                    </h2>
+                    <ul>
+                        <li>More than 50 projects</li>
+                        <li>Top languages                         
+                            <ul style="list-style: none;">
+                                <li><img height="40px" data-src="./images/java-logo.png" alt=""> Java</li>
+                                <li><i class="fab fa-js-square" style="color:green"></i> JavaScript</li>
+                                <li><img height="40px" data-src="./images/terminal.png" alt=""> Shell</li>
+                                <li><i class="fab fa-html5" style="color:red"></i> HTML</li>
+                                <li><img height="30px" data-src="./images/typescript.png" alt=""> TypeScript</li>
+                            </ul>
+                        </li>
+                        <img hdata-src="./images/top-languages.png" alt="">
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <ul>
+                        <i class="fa fa-star" style="color:orange"></i>&nbsp;Main projects
+                        <li>generator-jhipster</li>
+                        <li>jhipster.github.io</li>
+                        <li>jdl-studio</li>
+                        <li>jhipster-registry</li>
+                        <li>jhipster-online</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <ul>
+                        <i class="fa fa-book" style="color:green"></i>&nbsp;Libraries
+                        <li>ng-jhipster</li>
+                        <li>react-jhipster</li>
+                        <li>jhipster-core</li>
+                        <li>jhipster (lib)</li>
+                        <li>jhipster-uml</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <ul>
+                        <i class="fa fa-flask" style="color:purple"></i>&nbsp;Sample applications
+                        <li>jhipster-sample-app-X (18 apps)</li>
+                        <li>jdl-samples</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <ul>
+                        <i class="fa fa-wrench" style="color:gray"></i>&nbsp;Tools
+                        <li>jhipster-console</li>
+                        <li>jhipster-devbox</li>
+                        <li>jhipster-ide</li>
+                        <li>chocolatey-package</li>
+                        <li>jhipster-oh-my-zsh-plugin</li>
+                        <li>jhipster-fisherman-plugin</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Continuous Integration</h2>
+                    <ul style="line-height:2.0;">
+                        <li><i class="fa fa-toolbox" style="color:gray"></i>&nbsp;What do we use ?</li>
+                        <li><i class="fa fa-code-branch" style="color:blue"></i>&nbsp;What happens when someone summits a PR ?</li>
+                        <li><i class="fa fa-code-branch" style="color:green"></i>&nbsp;What happens when it's merged into master ?</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <a>
+                        <img height="100px" data-src="./images/Travis-CI.png" alt="">
+                    </a>
+                    <p>
+                        <ul style="line-height:2.0;">
+                            <li>Travis is free for Open Source</li>
+                            <li>Each push will trigger 15 builds</li>
+                            <li>More than 12200 builds since 2013</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <a>
+                        <img height="100px" data-src="./images/Travis-CI.png" alt="">
+                    </a>
+                    <a>
+                        <img height="500px" data-src="./images/jhipster-travis.png" alt="">
+                    </a>
+                </section>
+                <section>
+                    <h3>What do we need to test ?</h3>
+                    <ul>
+                        <li>The generator him self</li>
+                        <li>The installation of tools
+                            <br/>
+                            <img height="64px" data-src="./images/nodejs.png" alt="">
+                            <img height="64px" data-src="./images/java.jpg" alt="">
+                            <img height="64px" data-src="./images/yarn.jpg" alt="">
+                            <img height="48px" data-src="./images/git.png" alt="">
+                        </li>
+                        <li>The generated application</li>
+                        <ul>
+                            <li>Backend tests</li>
+                            <li>Frontend tests</li>
+                            <li>End-to-end tests</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Hard to test everything</h3>
+                    <ul>
+                        <li><i class="fas fa-code"></i> Front : <i class="fab fa-angular" style="color:red"></i> Angular / <i class="fab fa-react" style="color:cyan"> </i>React</li>
+                        <li><i class="fa fa-screwdriver" style="color:gray"></i> Back : Maven / Gradle</li>
+                        <li><i class="fa fa-lock" style="color:orange"></i> Security : JWT, OAuth2, Session</li>
+                        <li><i class="fab fa-css3-alt" style="color:blue"></i> CSS : sass</li>
+                        <li><i class="fas fa-save" style="color:black"></i> Cache</li>
+                        <li><i class="fas fa-database" style="color:rgba(134, 1, 134, 0.603)"></i> Database : MySQL, MariaDB, PostgreSQL, MongoDB, Cassandra, CouchBase</li>
+                        <li><i class="fas fa-filter" style="color:pink"></i> Option : Kafka, ElasticSearch, WebSocket</li>
+                        <li><i class="fa fa-cubes" style="color:green"></i> Microservices : Eureka, Consul, UAA, OAuth2</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>
+                        <img height="64px" data-src="./images/daily.png" alt="">&nbsp;Daily builds at Hipster-Labs</h3>
+                    <p>
+                        <img height="500px" data-src="./images/jhipster-daily-builds.png" alt="">
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        <img height="100px" data-src="./images/tips.svg" alt="">&nbsp;Tips for contributors</h3>
+                    <p>Link your GitHub account to Travis CI&nbsp;
+                        <img height="140px" data-src="./images/github-travisci.png"
+                            alt="">
+                    </p>
+                    <ul>
+                        <li>Work on your fork</li>
+                        <li>Push in a branch of your fork</li>
+                        <li>A build will be triggered in your Travis</li>
+                        <li>If everything passed, you can pull request</li>
+                    </ul>
+                    </p>
+                </section>
+            </section>
+            <section>
+                <a>
+                    <img height="100px" data-src="./images/sonarcloud.png" alt="">
+                </a>
+                <a>
+                    <img height="500px" data-src="./images/sonarcloud-analyze.png" alt="">
+                </a>
+            </section>
+            <section>
+                <h2>
+                    <img height="100px" data-src="./images/docker-hub.png" alt="">Docker Hub
+                </h2>
+                <p>
+                    <img height="500px" data-src="./images/jhipster-docker-hub.png" alt="">
+                </p>
+            </section>
+            <section>
+                <h4>Resume</h4>
+                <img data-src="./images/jhipster-resume.png" alt="">
+            </section>
+            <section>
+                <section>
+                    <h1>Road Map</h1>
+                    <i class="fas fa-road fa-6x" style="color: gray"></i>
+                </section>
+                <section>
+                    <h2>Use other free CI</h2>
+                    <img height="100px" data-src="./images/circleci.png" alt="">to increase the number of builds
+                    <img height="50px" data-src="./images/appveyor.png" alt=""> to test JHipster with Windows
+                </section>
+                <section>
+
+                    <h2>SonarCloud organization</h2>
+                    <h2>
+                        <img height="140px" data-src="./images/sonarcloud-logo.jpg" alt="">
+                    </h2>
+                    <ul>
+                        <li>Migrate to Organization</li>
+                        <li>Add more applications</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Other tests</h2>
+                    <img height="100px" data-src="./images/gatling-logo.png" alt="">
+                    <br/>
+                    <img height="140px" data-src="./images/docker-compose.png" alt="">
+                    <img height="140px" data-src="./images/kubernetes.png" alt="">
+                </section>
+                <section>
+                    <h2>About releases ?</h2>
+                    <p class="fragment">
+                        <img height="140px" data-src="./images/jdubois.jpeg" alt="">
+                    </p>
+                    <ul class="fragment" style="list-style: none; line-height:2.0;">
+                        <li><i class="fa fa-edit" style="color:black"></i> Release notes</li>
+                        <li><i class="fab fa-twitter" style="color:rgb(0, 132, 255)"></i> Tweet</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Our Dream <img height="100px" data-src="./images/dream.gif" alt=""></h2>
+                    <ul style="line-height:2.0; list-style: none;">Automate:
+                        <br/>
+                        <li><i class="fa fa-tags" style="color:black"></i> Tag</li>
+                        <li><i class="fab fa-npm" style="color:red"></i> Push to NPM</li>
+                        <li><i class="fa fa-flask" style="color:purple"></i> Generation of all jhipster-sample-app-X</li>
+                        <li><i class="fas fa-laptop"></i> DevBox</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h1>Part 2</h1>
+                <h2>How JHipster can help DevOps teams</h2>
+            </section>
+            <section>
+                <section>
+                    <h2><i class="fa fa-wrench" style="color:gray"></i> Setting up Continuous Integration</h2>
+                    <ul style="line-height:2.0;">
+                        <li>Use CICD Sub Generator</li>
+                        <li>Answer all questions</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Choose your pipeline</h2>
+                    <ul style="line-height:2.0; list-style: none;">
+                        <li><img height="60px" data-src="./images/jenkins.jpeg" alt=""> Jenkins 2</li>
+                        <li><img height="60px" data-src="./images/travisci-logo.jpeg" alt=""> Travis CI</li>
+                        <li><img height="60px" data-src="./images/gitlab.jpeg" alt=""> GitLab CI</li>
+                        <li><img height="50px" data-src="./images/circleci-logo.png" alt=""> CircleCI (v1)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Tasks / Integrations to include</h2>
+                    <ul style="line-height:2.0; list-style: none;">
+                        <li><i class="fa fa-archive" style="color:rgb(5, 204, 5)"></i> Artifactory</li>
+                        <li><img height="50px" data-src="./images/sonarcloud-logo.jpg" alt="">  Sonar Analyze</li>
+                        <li>🐳 Docker Image</li>
+                        <li><img height="50px" data-src="./images/heroku.png" alt=""> Deploy to Heroku</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <img data-src="./images/thanks.gif" alt="">
+                <p>Slides: <a href="https://pascalgrimaud.github.io/jhipster-conf-2018/">pascalgrimaud.github.io/jhipster-conf-2018</a></p>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            history: true,
+            transition: 'convex',
+            dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+            ]
+        });
+    </script>
+</body>
+
 </html>
